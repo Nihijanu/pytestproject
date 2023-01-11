@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="8" time="0.187" timestamp="2022-11-24T16:37:20.147618" hostname="HCL-02-07"><testcase classname="Test_shopping" name="test_u[admin-123]" time="0.002"><failure message="assert False">user = 'admin', password = '123'
+
+    @pytest.mark.parametrize("user,password",[("admin","123"),("user","1234")])
+    def test_u(user,password):
+        if user=="admin" and password=="123" :
+            assert True
+        if user=="user" and password=="1234" :
+            assert True
+        else:
+&gt;           assert False
+E           assert False
+
+Test_shopping.py:9: AssertionError</failure></testcase><testcase classname="Test_shopping" name="test_u[user-1234]" time="0.002" /><testcase classname="Test_shopping" name="test_cart[100]" time="0.001"><failure message="assert False">price = 100
+
+    @pytest.mark.parametrize("price",[100,200,98,600,500])
+    def test_cart(price):
+        if price &gt;100:
+            assert True
+        else:
+&gt;           assert False
+E           assert False
+
+Test_shopping.py:15: AssertionError</failure></testcase><testcase classname="Test_shopping" name="test_cart[200]" time="0.001" /><testcase classname="Test_shopping" name="test_cart[98]" time="0.002"><failure message="assert False">price = 98
+
+    @pytest.mark.parametrize("price",[100,200,98,600,500])
+    def test_cart(price):
+        if price &gt;100:
+            assert True
+        else:
+&gt;           assert False
+E           assert False
+
+Test_shopping.py:15: AssertionError</failure></testcase><testcase classname="Test_shopping" name="test_cart[600]" time="0.001" /><testcase classname="Test_shopping" name="test_cart[500]" time="0.001" /><testcase classname="Test_shopping" name="test_logout" time="0.002" /></testsuite></testsuites>
